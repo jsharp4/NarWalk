@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="20dip">
+
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="278dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/music" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="98dp"
+        android:layout_weight="1.0"
+        android:text="An application to Record sound using AudioRecord. For testing, first press 'Send to Matlab' and then press 'Play Sound'"
+        android:textSize="25dip" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/inputFreq"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:onClick="playSound"
+            android:text="Play Sound" />
+
+        <Button
+            android:id="@+id/btnsend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:onClick="sendSignalToMatlab"
+            android:text="Send to Matlab"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:onClick="startStreamingAudio"
+            android:text="Start Recording" />
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:onClick="stopStreamingAudio"
+            android:text="Stop Recording" />
+
+        <Button
+            android:id="@+id/plotButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:onClick="plotData"
+            android:text="Plot" />
+    </LinearLayout>
+</LinearLayout>
