@@ -470,7 +470,32 @@ public class MainActivity extends AppCompatActivity{
         }
     }
 
+    private List<Double> peakDetect(double[] sig, double threshold)
+    {
+        List peak_arr = new List<Double>();
+        for(int i=0;i<sig.length;i++)
+        {
+            if(i==0)
+            {
 
+            }
+            else if(i==sig.length-1)
+            {
+
+            }
+            else
+            {
+                if((sig[i]>sig[i-1])&&(sig[i]>sig[i+1]))
+                {
+                    if(sig[i]>=threshold)
+                    {
+                        peak_arr.add(sig[i]);
+                    }
+                }
+            }
+        }
+        return peak_arr;
+    }
     private void startStreamingSound() {
 
         Log.i(TAG, "Starting the background thread to stream the audio data");
